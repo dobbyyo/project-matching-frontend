@@ -86,7 +86,7 @@ const ProjectDetail = () => {
     },
     [setTechSelected, TechSelected, setSendTech, sendTech]
   );
-  console.log(sendTech);
+
   useEffect(() => {
     projectPositionRegisterDtoList.map((v: IPositionListObj) =>
       setSendPos([
@@ -193,20 +193,5 @@ const ProjectDetail = () => {
     </PrimaryLayout>
   );
 };
-
-// export const getServerSideProps = wrapper.getServerSideProps(
-//   (store) =>
-//     async ({ req, params }: any) => {
-//       store.dispatch(loadPositionRequest());
-//       store.dispatch(loadTechRequest());
-//       store.dispatch(END);
-
-//       await (store as SagaStore).sagaTask?.toPromise();
-
-//       return {
-//         props: {},
-//       };
-//     }
-// );
 
 export default ProjectDetail;
